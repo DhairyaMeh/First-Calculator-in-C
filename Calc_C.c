@@ -44,30 +44,35 @@ int main() {
 
 	printf("What operation would you like to do?\nOption 1: Addition\nOption 2: Subtraction\nOption 3: Multiplacation\nOption 4: Division\n");
 	scanf("%d", &Op_num);
-
-	printf("What is the second number?\n");
-	scanf("%lf", &num2);
-
-
+	
 	if (Op_num == 1) {
+		printf("What is the second number?\n");
+		scanf("%lf", &num2);
 		Addi1 = Addi(num1, num2);
 		printf("The Answer is: %f\n", Addi1);
 	}
 	else if (Op_num == 2) {
+		printf("What is the second number?\n");
+		scanf("%lf", &num2);
 		Subt1 = Subt(num1, num2);
 		printf("The Answer is: %f\n", Subt1);
 	}
 	else if (Op_num == 3) {
+		printf("What is the second number?\n");
+		scanf("%lf", &num2);
 		Mult1 = Mult(num1, num2);
 		printf("The Answer is: %f\n", Mult1);
 	}
 	else if (Op_num == 4) {
+		printf("What is the second number?\n");
+		scanf("%lf", &num2);
 		Divi1 = Divi(num1, num2);
 		printf("The Answer is: %f\n", Divi1);
 	}
 	else {
-		printf("Ivalid Operator\n");
+		printf("Ivalid Operation!\nPlease enter a number from 1 - 4\n");
 	}
 
 
+	return 0;
 }
