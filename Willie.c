@@ -71,26 +71,3 @@ int main() {
 
 
 }
-
-
-
-
-
-
-
-
-
-/*
-	switch (Op_num){
-		case 1:
-			num3 = num1 + num2;
-		case 2:
-			num3 = num1 - num2;
-		case 3:
-			num3 = num1 * num2;
-		case 4:
-			num3 = num1 / num2;
-		default:
-			printf("Invalid Operation");
-	}
-	*/
