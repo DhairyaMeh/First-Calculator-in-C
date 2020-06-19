@@ -25,24 +25,25 @@ double Mult(double x, double y) {
 double Divi(double x, double y) {
 	double z;
 	z = x / y;
-	return(z);
+	return(z); 
 }
 
 
 int main() {
 
-	int Op_num, j, k, cont;
+	char cont[3];
+	int Op_num, j, k;
 	double num1, num2, Addi1, Subt1, Mult1, Divi1;
 
 	j = 1;
-	k = 1; 
-	
+	k = 1;
+
 	while (j < 2) {
 
 		j = 1;
-		k = 1; 
+		k = 1;
 
-		printf("Welcome to my super calc MD-300!\n\n");
+		printf("\nWelcome to my super calc MD-300!\n\n");
 
 		printf("What is the first number?\n");
 		scanf("%lf", &num1);
@@ -77,21 +78,24 @@ int main() {
 		else {
 			printf("Ivalid Operation!\nPlease enter a number from 1 - 4\n");
 		}
-		
-		while(k < 2) {
+
+		while (k < 2) {
 			printf("Would you like to perform another calculation? (Y/N)\n");
-			scanf("%d", &cont);
-			if (cont == 1) {
+			scanf("%s", cont);
+			if ( (!strcmp(cont, "y")) ||  (!strcmp(cont, "Y"))  || (!strcmp(cont, "yes")) || (!strcmp(cont, "Yes")) || (!strcmp(cont, "yEs")) || (!strcmp(cont, "YEs")) || (!strcmp(cont, "yeS")) || (!strcmp(cont, "YeS")) || (!strcmp(cont, "yES")) || (!strcmp(cont, "YES")) ) {
 				j = 1;
 				k = k++;
-			} else if (cont == 2) {
+			}
+			else if ( (!strcmp(cont, "n")) || (!strcmp(cont, "N")) || (!strcmp(cont, "no")) || (!strcmp(cont, "No")) || (!strcmp(cont, "nO")) || (!strcmp(cont, "NO")) ) {
 				j = j++;
 				k = k++;
-			} else {
+			}
+			else {
 				k = 1;
 				printf("Invalid Answer!\nPlease Try Again.\n");
 			}
 		}
+		
 	}
 	return 0;
 }
