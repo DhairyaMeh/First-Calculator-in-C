@@ -31,13 +31,16 @@ double Divi(double x, double y) {
 
 int main() {
 
-	int Op_num, j, cont;
+	int Op_num, j, k, cont;
 	double num1, num2, Addi1, Subt1, Mult1, Divi1;
 
 	j = 1;
-
+	k = 1; 
+	
 	while (j < 2) {
 
+		j = 1;
+		k = 1; 
 
 		printf("Welcome to my super calc MD-300!\n\n");
 
@@ -74,15 +77,21 @@ int main() {
 		else {
 			printf("Ivalid Operation!\nPlease enter a number from 1 - 4\n");
 		}
-
-		printf("Would you like to perform another calculation? (Y/N)\n");
-		scanf("%d", &cont);
-		if (cont == 1) {
-			j = 1;
-		} else {
-			j = j++;
-		}
 		
+		while(k < 2) {
+			printf("Would you like to perform another calculation? (Y/N)\n");
+			scanf("%d", &cont);
+			if (cont == 1) {
+				j = 1;
+				k = k++;
+			} else if (cont == 2) {
+				j = j++;
+				k = k++;
+			} else {
+				k = 1;
+				printf("Invalid Answer!\nPlease Try Again.\n");
+			}
+		}
 	}
 	return 0;
 }
